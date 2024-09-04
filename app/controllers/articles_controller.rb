@@ -25,7 +25,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
-		binding.pry
 		@article = Article.find(params[:id])
 		if @article.update(strong)
 			redirect_to @article
@@ -41,7 +40,6 @@ class ArticlesController < ApplicationController
 
 	private
 	def strong
-		binding.pry
     params.require(:article).permit(:name, :age, :address)
 	end
 end	
