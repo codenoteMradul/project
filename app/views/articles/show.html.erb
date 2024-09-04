@@ -1,0 +1,21 @@
+<h1>show</h1>
+<ul>
+	<% @article.each do |article| %>
+	
+	<li>
+	<%= article.name %>
+	</li>
+
+	<li>
+	<%= article.age %>
+	</li>
+
+	 <li>	 	
+	<%= article.address %>
+	</li><br>
+<% end %>
+</ul>
+<%= link_to "back to index page", articles_path %><br><br>
+<%= link_to "edit the article", edit_article_path %><br><br>
+
+
